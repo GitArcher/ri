@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=2">
+    <title>Neuro Link</title>
+    <style media="screen">
+      body {
+        display: flex;
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        background: #073642;
+      }
+      #func  div:hover,
+      #modes div:hover,
+      #memory-func div:hover {
+        background: rgb(53, 71, 171);
+      }
+      #block-other {
+        width: 30vw;
+      }
+      #block-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40vw;
+        font-size: 2vmin;
+      }
+      #block-info {
+        width: 30vw;
+        padding-top: 20px;
+        font-size: 2vmin;
+        color: rgb(63, 81, 181);
+      }
+
+      #func {
+        display: flex;
+        margin: 20px 0;
+        width: 40vh;
+        max-width: 100%;
+        height: 3vh;
+        background: rgb(63, 81, 181);
+        line-height: 3vh;
+        cursor: pointer;
+      }
+      #func div {
+        flex-grow: 1;
+      }
+
+      #c1 {
+        width: 40vh;
+        max-width: 100%;
+        height: auto;
+        border: solid rgb(63, 81, 181) 1px;
+      }
+
+      #modes {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        width: 40vh;
+        max-width: 100%;
+        height: auto;
+        line-height: 4vh;
+        background: rgb(63, 81, 181);
+        cursor: pointer;
+      }
+      #teach {
+        width: 50%;
+      }
+      #train {
+        width: 50%;
+      }
+
+      #memory-func {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40vh;
+        max-width: 100%;
+        height: 4vh;
+        line-height: 4vh;
+        background: rgb(63, 81, 181);
+        cursor: pointer;
+      }
+      #save {
+        width: 50%;
+      }
+      #load {
+        width: 50%;
+      }
+
+      #name-NNet {
+        align-self: center;
+        margin-top: auto;
+        font-size: 2vmin;
+        color: rgb(63, 81, 181);
+      }
+      #cstmMsg {
+        width: 60vw;
+        height: 60vh;
+        position: absolute;
+        left: 20vw;
+        top: 20vh;
+        padding: 10px;
+        border-radius: 10px;
+        overflow: auto;
+        background: rgba(63, 81, 181, 0.5);
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body onselectstart="return false">
+    <div id="block-other"></div>
+
+    <div id="block-main">
+      <div id="func">
+        <div id="clear">Clear</div>
+      </div>
+
+      <canvas id="c1" width ="300" height ="300"></canvas>
+
+      <div id="modes">
+        <div id="teach">Remember</div>
+        <div id="train">Recognize</div>
+      </div>
+
+      <div id="memory-func">
+        <div id="save">Save</div>
+        <div id="load">Load</div>
+      </div>
+
+    </div>
+
+    <div id="block-info">
+    </div>
+
+    <div id="cstmMsg"></div>
+    <script src="nl.js"></script>
+    <script src="mouse-painting.js"></script>
+    <script src="touch-painting.js"></script>
+  </body>
+</html>
